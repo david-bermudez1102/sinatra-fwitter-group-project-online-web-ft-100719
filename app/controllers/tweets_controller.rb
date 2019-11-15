@@ -26,6 +26,7 @@ class TweetsController < ApplicationController
         flash[:message] = "Tweet posted with success!"
         redirect to "/tweets/#{tweet.id}"
       else
+        flash[:message] = "Please enter a valid tweet."
         redirect to "/tweets/new"
       end
     else
